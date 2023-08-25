@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+    <!-- font awesome cdn for font icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googlepis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googlepis.com/css2?"
+        family="Poppins:wight@100;200;300;400;500;600;700;800;900&display=swap" rel="stilesheet" />
+    <!-- custom External css file link -->
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js@2.0,12"></script>
+    <!-- custom js file link -->
+<style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    place-items: center;
+    padding-top: 35px;
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff00ff,
+            #00ffff,
+            #00ff00,
+            #ffff00,
+            #ff6600);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s infinite;
+    perspective: 1000px;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background-color: rgb(243, 64, 33);
+    padding-top: 30px;
+    width: 600px;
+    justify-content: center;
+    display: grid;
+}
+
+.heading1 {
+    margin-left: 200px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: white;
+    text-shadow: 0px 1px 1px white;
+}
+
+.heading2 {
+    font-size: 30px;
+    color: white;
+    /* letter-spacing: 1px; */
+    word-spacing: 1px;
+    margin-left: 110px;
+    text-shadow: 0px 1px 1px white;
+}
+.MainBox {
+    background-color: #960909;
+    padding-top: 30px;
+    /* width: 100%; */
+    box-sizing: border-box;
+    height: 275px;
+    width: 550px;
+    border: 1px solid #960909;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    box-shadow: 0px 3px 6px 0 #580303f8;
+}
+.box1 {
+    left: 0;
+    margin-left: 50px;
+    border-radius: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    height: 55px;
+    width: 250px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 6px 0 #10101068;
+}
+.Name {
+    color: #2f2fb1;
+    font-size: 9px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+p {
+    color: black;
+    font-size: 8px;
+    font-weight: 200;
+    padding-left: 10px;
+}
+.time {
+    padding-left: 70px;
+    color: #545454;
+    font-size: 7px;
+}
+.box2 {
+    left: 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    height: 55px;
+    width: 250px;
+    margin-left: 250px;
+    box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.time2 {
+    padding-left: 60px;
+    color: #545454;
+    font-size: 7px;
+}
+.seen-icon {
+    margin-right: 5px;
+    color: #2f2fb1;
+    font-size: 8px;
+    padding-left: 3px;
+}
+
+.box3 {
+    left: 0;
+    margin-top: 0px;
+    margin-left: 50px;
+    border-radius: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    height: 55px;
+    width: 250px;
+    box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.heading3 {
+    margin-top: 0px;
+    color: white;
+    margin-left: 160px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-shadow: 0px 1px 1px white;
+}
+.heading4 {
+    margin-top: 4px;
+    color: #e4e1e1;
+    margin-left: 100px;
+    font-size: 26px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-shadow: 0px 1px 1px white;
+    margin-bottom: 40px;
+}
+button {
+    box-shadow: 1px 1px 1px 1px #2bd2ff, 0 0 1px 1px #fa8bff;
+    font-size: 65;
+    /* font-family: system-ui ; */
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: white;
+    background-color: black;
+    padding: 1.5rem 3.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 5px solid #2bd2ff, #fa8bff;
+    background-clip: padding-box;
+    background-origin: border-box;
+    animation: rotatingGradient 5s linear infinite;
+    position: absolute;
+    margin-top: 575px;
+    margin-left: 200px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+    perspective: 1000px;
+    text-transform: uppercase;
+    /* border-color: 2px solid linear-gradient(var(--X), #00ccff, #0e1538, #0e1538, #d400d4);; */
+}
+
+@keyframes rotatingGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+button:hover {
+    background-image: linear-gradient(90deg,
+            #fa8bff 0%,
+            #2bd2ff 50%,
+            #2bff88 75%,
+            #fa8bff 100%);
+    color: black;
+    animation: slide 7s linear infinite;
+    text-shadow: 1px 1px 1px #7b7bf1;
+    transform: translate3d(0px, 0px, 50px);
+    border: transparent;
+}
+
+@keyframes slide {
+    100% {
+        background-position: 20rem;
+    }
+}
+
+hr {
+    margin-top: 100px;
+    color: lightcyan;
+}
+.heading5 {
+    margin-top: 5px;
+    color: white;
+    margin-left: 190px;
+    font-size: 26px;
+    text-shadow: 0px 1px 1px white;
+    font-family: "Eras Bold ITC";
+}
+.heading6 {
+    color: #e7e5e5;
+    margin-left: 190px;
+    font-size: 35px;
+    text-shadow: 0px 1px 1px white;
+    /* font-family: "poppins"; */
+    margin-top: -4px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.social {
+    background-color: black;
+    height: 50px;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    padding-left: 170px;
+    margin-top: 20px;
+}
+
+.social i {
+    color: #272752;
+    font-size: 16px;
+    background-color: #eee;
+    margin: 5px;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.social i:hover {
+    transform: scale(1.2);
+    border: 1px solid #eee;
+    transition: .4s;
+}
+.footer {
+    margin-top: 30px;
+    color: black;
+    font-weight: 600;
+    /* margin-left: 190px; */
+    font-size: 13px;
+    text-shadow: 0px 1px 1px #5d5c5c;
+    font-family: "Eras Bold ITC";
+}
+.footer a {
+    color: blue;
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="heading1">
+            <h3>today in our</h3>
+        </div>
+        <div class="heading2">
+            <h1>chat support...</h1>
+        </div>
+
+        <div class="MainBox">
+
+            <div class="box1">
+                <div class="Name">Shivam</div>
+                <p>I have issues with my BILL and</p>
+                <p>I haven't gotten any explanation <span class="time">3:41 PM</span> </p>
+            </div>
+            <div class="box2">
+                <div class="Name">Zomato</div>
+                <p>Sorry Shivam, please let me know</p>
+                <p>what has happened with the bill?
+                    <span class="time2">3:42 PM
+                        <span class="seen-icon">
+                            <i class="fas fa-check-double"></i>
+                        </span>
+                    </span>
+                </p>
+            </div>
+            <div class="box3">
+                <div class="Name">Shivam</div>
+                <p>I just want to know </p>
+                <p>billo bahhe BILL-eyan da ke karegi</p>
+                <p>bagge bagge BILL-eyan ka ke karegi<span class="time">3:43 PM</span></p>
+            </div>
+        </div>
+        <div class="heading3">
+            <h2>for craving related</h2>
+        </div>
+        <div class="heading4">
+            <h3>support please tap here</h3>
+        </div>
+        <button type="btn">Order now</button>
+        <hr>
+        <div class="heading5">
+            <h1>zomato</h1>
+        </div>
+        <div class="heading6">
+            <h6>deliver on time</h6>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+    <p class="footer">keen on missing out on yummazing emails from Zomato? Please <a href="index.html">unsubscribe
+            here</a>.</p>
+</body>
+
+</html>
